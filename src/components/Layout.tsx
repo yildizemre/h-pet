@@ -487,10 +487,10 @@ export function Layout() {
 
             <div className="flex shrink-0 items-center gap-2">
               <button
-                onClick={() => nav("/mobile")}
+                onClick={() => nav("/sunum")}
                 className="inline-flex h-8.5 items-center gap-1.5 rounded-lg bg-accent px-3 text-[12px] font-bold text-[#04161a] shadow-[0_6px_18px_-8px_var(--c-accent)] transition hover:brightness-110"
               >
-                <MonitorPlay size={15} /> Mobil Görünüm
+                <MonitorPlay size={15} /> Sunum
               </button>
               <Clock_ />
               <button

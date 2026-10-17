@@ -25,6 +25,7 @@ import Reports from "./pages/Reports";
 import SettingsPage from "./pages/Settings";
 import Branches from "./pages/Branches";
 import NotFound from "./pages/NotFound";
+import Presentation from "./pages/Presentation";
 
 function Guard({ k, children }: { k: NavKey; children: React.ReactNode }) {
   const { can } = useAuth();
@@ -48,6 +49,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<Navigate to="/" replace />} />
+      <Route path="/sunum" element={<Presentation />} />
       <Route element={<Layout />}>
         <Route path="/" element={<Dashboard />} />
         <Route path="/notifications" element={page("notifications", <Notifications />)} />
