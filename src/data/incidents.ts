@@ -285,16 +285,6 @@ const LIST: Omit<Incident, "id">[] = [
 
   // 🔥 Yangın
   {
-    no: 18, cat: "fire", sev: "critical", status: "new", at: at(18, 36, 12),
-    cam: "CAM-10 · Saha Genel · Kanopi", img: img("pompa-adasinda-duman-tespit-edildi"), pump: "P3",
-    title: "Pompa Adasında Duman Tespit Edildi",
-    lines: ["Ada 2 · P3 yanında duman · güven %91", "Panel + mobil + WhatsApp bildirimi gönderildi"],
-    facts: [["Alan", "Pompa Adası 2"], ["Tespit", "DUMAN"], ["Güven", "%91"], ["Bildirim", "Panel · Mobil · WhatsApp"]],
-    detail: "Ada 2'de P3 yanında duman tespit edildi (sigara içen müşteri). Sistem 3 saniye içinde yetkililere bildirim gönderdi ve kanıt klibi kaydetti.",
-    action: "Sahaya müdahale et; pompa adasında sigara içilmesini engelle.",
-    link: "/fire", linkLabel: "Olayı İncele",
-  },
-  {
     no: 19, cat: "fire", sev: "critical", status: "closed", at: at(12, 51, 7),
     cam: "CAM-15 · Market Arkası", img: img("market-arkasinda-alev-belirtisi"),
     title: "Market Arkasında Alev Belirtisi",

@@ -104,10 +104,6 @@ Sonra aşağıdaki **Sahne** ve **Overlay** kısımlarını ekle.
 
 ## 🔥 Yangın
 
-### 18 · `pompa-adasinda-duman-tespit-edildi.jpg`
-- **Sahne:** Wide canopy view at dusk; a man standing next to pump P3 smoking a cigarette, a visible grey smoke plume near the dispenser.
-- **Overlay:** `CAM 10 - SAHA GENEL KANOPI`, `2026-10-17 18:36:12`. Thick red box around smoke: `SMOKE 91%`. Red box on man. Info panel: `Area: Pump Island 2` / `Detection: SMOKE` (red) / `Alert: Panel · Mobile · WhatsApp`
-
 ### 19 · `market-arkasinda-alev-belirtisi.jpg`
 - **Sahne:** Behind the convenience store, a waste container with small visible flames and smoke rising; an attendant running toward it with a red fire extinguisher.
 - **Overlay:** `CAM 15 - MARKET ARKASI`, `2026-10-17 12:51:07`. Red box on flames: `FLAME 88%`. Green box on attendant: `RESPONSE`. Info panel: `Area: Behind Market` / `Detection: FLAME` (red) / `Response: 01:40`

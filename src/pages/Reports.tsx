@@ -17,7 +17,7 @@ const DAY_SUMMARY = [
   "**16:00–18:00** arası personel ihtiyacın altında kaldı; zirvede personel başına 33 araç.",
   `Cam silme oranı **${pct((WASH.windows / WASH.served) * 100)}**; ${WASH.selfWash} müşteri camını kendi sildi.`,
   "Tanker boşaltmasında **3 emniyet ihlali** (koni, söndürücü, personel) kayıt altına alındı.",
-  `**1 drive-off** (${tl(2850)}), **2 yangın/duman**, **2 yasaklı alan** ve **1 gece güvenliği** olayı oluştu.`,
+  `**1 drive-off** (${tl(2850)}), **1 yangın**, **2 yasaklı alan** ve **1 gece güvenliği** olayı oluştu.`,
   "CAM-14 bağlantısı koptu; CAM-07 açı kayması ve CAM-04 kirlenme uyarısı aktif.",
 ];
 
@@ -26,7 +26,7 @@ const SECTION_ROWS: Record<(typeof SECTIONS)[number], [string, string, string][]
   Hizmet: [["Cam silme", pct((WASH.windows / WASH.served) * 100), "-2 puan"], ["Kendi silen", `${WASH.selfWash}`, "+6"], ["Katkı alan", `${WASH.additive}`, "+4"]],
   Personel: [["Eksik saat", "2", "—"], ["Yelek uyumu", "%86", "-14 puan"], ["Saha düzeni ihlali", "2", "+1"]],
   Tanker: [["Dolum", "1", "—"], ["Süre", "36 dk", "+2 dk"], ["Emniyet ihlali", "3", "+3"]],
-  Güvenlik: [["Yangın / duman", "2", "+2"], ["Yasaklı alan", "2", "+1"], ["Drive-off", "1", "+1"]],
+  Güvenlik: [["Yangın / duman", "1", "+1"], ["Yasaklı alan", "2", "+1"], ["Drive-off", "1", "+1"]],
   Market: [["Markete giren", n(MARKET.entered), "+%5"], ["Alışveriş", n(MARKET.bought), "+%3"], ["Ort. kasa bekleme", mmss(MARKET.avgWait), "+00:14"]],
   Kamera: [["Online", `${CAM_STATS.online}/${CAM_STATS.total}`, "-1"], ["Analitik sağlıklı", `${CAM_STATS.analyticsHealthy}`, "-3"], ["Uyarı", `${CAM_STATS.warning}`, "+3"]],
 };

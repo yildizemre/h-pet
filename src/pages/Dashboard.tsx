@@ -17,12 +17,12 @@ export const AI_BRIEF = [
   "**Drive-off:** 06 BZK 341 plakalı araç P2'den 2.850 TL yakıt alıp ödeme yapmadan çıktı — plaka ve klip kanıt paketine eklendi.",
   "**Tanker boşaltması** (34 TNK 905) emniyet konisi ve yangın söndürücü olmadan başladı; boşaltma 36 dk sürdü.",
   "**P6'da pompa işgali:** sürücü aracı bırakıp markete gitti, tabanca sonrası 09:18 işgal, arkada 2 araç.",
-  "18:36'da **Ada 2'de duman** tespit edildi (sigara) — bildirim 3 sn'de panel, mobil ve WhatsApp'a gitti.",
+  "12:51'de **market arkasında alev** tespit edildi; personel 1 dk 40 sn'de müdahale etti.",
   "Kamera sağlığı: **CAM-14** bağlantısı koptu, **CAM-07** açısı kaydı, **CAM-04** lensi kirli.",
 ];
 
 const ACTIONS = [
-  { t: "Ada 2'de duman olayına müdahale et", to: "/fire", tone: "danger" as const },
+  { t: "Tank sahasına yetkisiz giriş kaydını incele", to: "/restricted", tone: "danger" as const },
   { t: "06 BZK 341 drive-off kanıt paketini ilet", to: "/driveoff", tone: "danger" as const },
   { t: "P6'daki aracı pompadan çektir", to: "/pumps", tone: "danger" as const },
   { t: "17:00–19:00 arası +2 pompacı planla", to: "/staffing", tone: "warn" as const },
@@ -103,7 +103,7 @@ export default function Dashboard() {
         <KpiCard label="Anlık Kuyruk" value={`${queue}`} unit="araç" sub="P3'te 5 araç · Ada 2" icon={ListOrdered} tone="warn" onClick={() => nav("/queue")} />
         <KpiCard label="Sahadaki Personel" value="5" unit="/ 6" sub="1 mola · 1 pasif" icon={UsersRound} onClick={() => nav("/staffing")} />
         <KpiCard label="Cam Silme Oranı" value={pct((WASH.windows / WASH.served) * 100, 0)} sub={`${WASH.windows} cam · ${WASH.selfWash} müşteri kendi sildi`} icon={Sparkles} tone="violet" onClick={() => nav("/service-quality")} />
-        <KpiCard label="Yangın / Duman" value="2" sub="Ada 2 duman · market arkası alev" icon={Flame} tone="danger" alert onClick={() => nav("/fire")} />
+        <KpiCard label="Yangın / Duman" value="1" sub="market arkası alev · müdahale 01:40" icon={Flame} tone="danger" alert onClick={() => nav("/fire")} />
         <KpiCard label="Drive-off" value="1" sub={`${tl(2850)} · 06 BZK 341`} icon={Banknote} tone="danger" alert onClick={() => nav("/driveoff")} />
         <KpiCard label="Tanker Dolum" value="1" sub="36 dk · 2 emniyet ihlali" icon={Truck} tone="warn" onClick={() => nav("/tanker")} />
         <KpiCard label="Markete Giren" value={n(MARKET.entered)} sub={`${n(MARKET.bought)} alışveriş · %${Math.round((MARKET.bought / MARKET.entered) * 100)}`} icon={ShoppingCart} onClick={() => nav("/market")} />

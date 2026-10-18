@@ -6,7 +6,7 @@ import { incByCat } from "../data/incidents";
 import { CAMERAS, STATION } from "../data/station";
 
 const ZONES = [
-  { t: "Pompa adaları", cams: ["CAM-03", "CAM-05", "CAM-07", "CAM-09", "CAM-10"], ev: 1 },
+  { t: "Pompa adaları", cams: ["CAM-03", "CAM-05", "CAM-07", "CAM-09", "CAM-10"], ev: 0 },
   { t: "Tanker boşaltma alanı", cams: ["CAM-11"], ev: 0 },
   { t: "Tank sahası", cams: ["CAM-13"], ev: 0 },
   { t: "Market / market arkası", cams: ["CAM-15", "CAM-17"], ev: 1 },
@@ -19,7 +19,7 @@ export default function Fire() {
       <PageHead title="Yangın ve Duman Erken Uyarı" sub={`Modül 9 · ${STATION.full} · pompa adası, tanker alanı, market ve depo`} />
 
       <KpiGrid cols="xl:grid-cols-5">
-        <KpiCard label="Bugünkü tespit" value="2" sub="1 duman · 1 alev" icon={Flame} tone="danger" alert />
+        <KpiCard label="Bugünkü tespit" value="1" sub="market arkası · alev" icon={Flame} tone="danger" alert />
         <KpiCard label="Ort. bildirim süresi" value="3" unit="sn" sub="tespitten bildirime" icon={BellRing} tone="ok" />
         <KpiCard label="Ort. müdahale" value="01:40" sub="market arkası olayı" icon={Clock3} />
         <KpiCard label="İzlenen bölge" value={`${ZONES.length}`} sub={`${ZONES.reduce((a, z) => a + z.cams.length, 0)} kamera`} icon={MapPin} />
@@ -27,7 +27,7 @@ export default function Fire() {
       </KpiGrid>
 
       <div className="mb-4">
-        <AIInsight tone="danger">18:36'da **Ada 2'de P3 yanında duman** tespit edildi (sigara içen müşteri). Bildirim **3 saniyede** panel, mobil uygulama ve WhatsApp grubuna gitti; 10 sn'lik kanıt klibi kaydedildi.</AIInsight>
+        <AIInsight tone="danger">12:51'de **market arkasındaki çöp konteyneri yanında alev** tespit edildi. Bildirim **3 saniyede** panel, mobil uygulama ve WhatsApp grubuna gitti; personel **01:40**'ta söndürücüyle müdahale etti.</AIInsight>
       </div>
 
       <Card className="mb-5">
@@ -50,7 +50,7 @@ export default function Fire() {
       </Card>
 
       <SectionTitle>Yangın & duman bildirimleri</SectionTitle>
-      <AlertGrid items={incByCat("fire")} cols="md:grid-cols-2" />
+      <AlertGrid items={incByCat("fire")} cols="md:grid-cols-2 xl:grid-cols-3" />
     </div>
   );
 }

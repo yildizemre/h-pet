@@ -7,7 +7,7 @@ import { Shot } from "../components/incident";
 import { incidentByNo } from "../data/incidents";
 import { cx } from "../lib/util";
 
-const STILLS = [18, 26, 14, 3].map(incidentByNo);
+const STILLS = [26, 14, 3, 20].map(incidentByNo);
 
 export default function Login() {
   const { login } = useAuth();

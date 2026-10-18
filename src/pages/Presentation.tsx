@@ -297,7 +297,7 @@ const SLIDES: { name: string; section: string; render: SlideFn }[] = [
     name: "Kapak",
     section: "",
     render: () => {
-      const stack = [18, 26, 3].map(incidentByNo);
+      const stack = [26, 14, 3].map(incidentByNo);
       return (
         <Frame>
           <div className="grid size-full grid-cols-[1fr_640px] gap-6 px-24 py-20">
@@ -700,13 +700,13 @@ const SLIDES: { name: string; section: string; render: SlideFn }[] = [
           </>
         }
         lead="Pompa adaları, tanker alanı, market ve depoda alev ve duman tespit edilir; bildirim saniyeler içinde gider."
-        steps={["18:36 · Ada 2'de duman · güven %91", "Bildirim 3 sn'de panel + mobil + WhatsApp", "12:51 · market arkası alev · 01:40'ta müdahale"]}
+        steps={["12:51 · market arkasında alev · güven %88", "Bildirim 3 sn'de panel + mobil + WhatsApp", "Personel 01:40'ta söndürücüyle müdahale etti"]}
         kpis={[
           { v: "3 sn", l: "Tespitten bildirime", tone: "green" },
-          { v: "2", l: "Bugünkü tespit", tone: "red" },
+          { v: "01:40", l: "Müdahale süresi", tone: "amber" },
         ]}
         output="Zaman damgalı kanıt klibi ve yetkililere anlık bildirim."
-        imgs={[18, 19]}
+        imgs={[19]}
       />
     ),
   },
